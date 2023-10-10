@@ -1,22 +1,22 @@
-import React from 'react';
-import style from './test.module.css';
-
+import style from './test.module.css'
 const Test = (props) => {
-  const { title, body, id, children } = props;
-
+  console.log("ff", props.fakedata, props);
+  const title = props.title;
+  const body = props.body;
+  const id = props.id;
   return (
     <>
       <section className={style.Card}>
-        <div className={style.Dflex}>
+        <div  className={style.Dflex}>
           <p><b>TITLE:-</b>{title}</p> <p><b>ID :-</b> {id}</p>
         </div>
         <hr />
         <div className={style.Body}>
-          {body}
+             {body}
         </div>
       </section>
-
-      <h2>{children}</h2>
+      
+      <h2>{props.children}</h2>
     </>
   );
 };
